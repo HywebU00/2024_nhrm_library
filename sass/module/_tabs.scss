@@ -1,0 +1,149 @@
+.tabSet {
+  margin: 30px auto;
+
+  .tabContent {
+    display: none;
+    position: relative;
+    padding: 0;
+
+    &.active {
+      display: block;
+    }
+
+    a:focus {
+      outline: none;
+      box-shadow: 0 0px 0px 2px $aFocus inset;
+
+      @include screen('mobile') {
+        box-shadow: none;
+      }
+    }
+
+    .content {
+      // ul {
+      //   margin: 0;
+      // }
+    }
+  }
+
+  .modeBBtn {
+    width: 100%;
+    margin: 0;
+    display: none;
+  }
+
+  &.modeB {
+    .tabItems {
+      display: none;
+    }
+
+    .tabContent {
+      display: block;
+      padding: 0;
+
+      .content {
+        display: none;
+        margin-bottom: 1em;
+        a:focus-visible {
+          outline: $aFocus 2px solid;
+        }
+      }
+    }
+
+    .modeBBtn {
+      display: block;
+      font-size: 1.125rem;
+      font-weight: 400;
+      min-height: 3.75rem;
+      padding: 0.5em 1.5em;
+      text-align: center;
+      border: none;
+      margin: 0 0 0.5em 0;
+      box-shadow: none;
+      background: #d9d9d9;
+      border-radius: 60px;
+      cursor: pointer;
+      &.active {
+        background-color: $colorSecondary;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.tabItems {
+  display: flex;
+  margin-bottom: 1em;
+  //background-color: #d9d9d9;
+  //border-radius: 1.875rem;
+  @include screen('mobile') {
+    flex-wrap: wrap;
+  }
+  .modeBBtn,
+  .tabBtn,
+  .item {
+    flex: 0 1 auto;
+    font-size: 1.125rem;
+    font-weight: 400;
+    min-height: 3.75rem;
+    padding: 0.5em 1.8em;
+    text-align: center;
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: #d9d9d9;
+    cursor: pointer;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    transition: 0.3s ease-out;
+    overflow: hidden;
+    @include screen('mobile') {
+      border-radius: 60px !important;
+      margin: 5px 2px;
+      padding: 0.25em 1.2em;
+      min-height: 3.125em;
+    }
+    &:first-of-type {
+      border-radius: 60px 0 0 60px;
+    }
+    &:last-of-type {
+      border-radius: 0 60px 60px 0;
+    }
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0px 0px 2px $aFocus inset;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: transparent;
+      border-radius: 0;
+      transition: 0.3s ease-out;
+    }
+
+    &:hover,
+    &.active,
+    &.active:hover {
+      color: #fff;
+      &::before {
+        content: '';
+        border-radius: 60px;
+        background-color: $colorSecondary;
+      }
+    }
+    &.active {
+      cursor: default;
+    }
+    &:hover {
+      &::before {
+        background-color: mix($colorSecondary, #fff, 80%);
+      }
+    }
+  }
+}

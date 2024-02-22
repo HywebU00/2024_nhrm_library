@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>國家人權博物館 圖書館</title>
+
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start -->
+      <header class="header">
+        <div class="container">
+          <a class="accessKey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+          <h1>
+            <a href="index.html"><img src="images/logo.png" alt="國家人權博物館" />圖書館</a>
+          </h1>
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="Site">
+            <!-- 新增div navList -->
+            <div class="navList">
+              <ul>
+                <li><a href="#">網站導覽</a></li>
+                <li><a href="#">人權博物館</a></li>
+                <li class="enLink"><a href="#">En</a></li>
+              </ul>
+            </div>
+          </nav>
+          <!-- navigation End -->
+          <!-- noscript -->
+          <noscript>
+            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+            <a href="#">網站導覽</a>
+          </noscript>
+        </div>
+      </header>
+      <!-- header End -->
+      <!-- 讀者專區 未登入狀態區塊-->
+      <div class="readerBlock">
+        <!-- 未登入狀態的btn -->
+        <a href="javascript:;" class="readerLogin">會員登入</a>
+        <div class="readerContent">
+          <div class="input_i">
+            <i class="i_man"></i>
+            <input name="username" type="text" placeholder="請輸入帳號" />
+          </div>
+          <div class="input_i">
+            <i class="i_lock"></i>
+            <input name="password" type="password" placeholder="請輸入密碼" />
+          </div>
+          <div class="formInline">
+            <button type="button" class="btn-login">登入</button>
+            <label><input type="checkbox" />記住帳號</label>
+          </div>
+        </div>
+      </div>
+      <!-- 讀者專區 已登入狀態區塊-->
+      <div class="readerBlock" style="display: none">
+        <!-- 已登入狀態的登入btn 文字變成讀者名-->
+        <a href="javascript:;" class="readerLogin">張家祥</a>
+        <div class="readerContent">
+          <ul>
+            <li>借閱中<span>10</span></li>
+            <li>逾期未歸<span>1</span></li>
+            <li>違規天數<span>1</span></li>
+            <li>預約<span>5</span></li>
+            <li>已到館<span>2</span></li>
+          </ul>
+          <div class="formInline">
+            <button class="myStudy">個人書房</button>
+            <button class="btn-login">登出</button>
+          </div>
+        </div>
+      </div>
+      <!-- main Start -->
+      <main id="center" class="main innerPage">
+        <a class="accessKey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+        <div class="container">
+          <aside class="leftBlock stickySidebar">
+            <nav class="menu mainMenu" role="navigation" aria-label="About page">
+              <ul>
+                <li>
+                  <a href="#">關於本室</a>
+                  <ul>
+                    <li><a href="#">第二層選單</a></li>
+                    <li><a href="#">第二層選單</a></li>
+                    <li><a href="#">第二層選單</a></li>
+                    <li><a href="#">第二層選單</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">館藏資源</a></li>
+                <li>
+                  <a href="#">借閱服務</a>
+                  <ul>
+                    <li><a href="#">第二層選單</a></li>
+                    <li><a href="#">第二層選單</a></li>
+                    <li><a href="#">第二層選單</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">設備服務</a>
+                  <ul>
+                    <li><a href="#">第二層選單</a></li>
+                    <li><a href="#">第二層選單</a></li>
+                    <li><a href="#">第二層選單</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">出版服務</a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+          <div class="centerBlock">
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+              <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">節點</a></li>
+                <li aria-current="page">節點</li>
+              </ul>
+            </nav>
+            <!-- h2節點 -->
+            <h2 class="title">節點標題</h2>
+            <!-- functionPanel -->
+            <div class="functionPanel">
+              <div class="publishTime"><span>發布日期：</span><time>2024-01-01</time></div>
+              <!-- 文字大小 -->
+              <div class="fontSize">
+                <span class="font-size-label">字型大小：</span>
+                <!-- 英文用<span>font-size：</span> -->
+                <ul aria-labelledby="font-size-label">
+                  <li><button role="button" href="#" class="small">小</button></li>
+                  <li><button role="button" href="#" class="medium">中</button></li>
+                  <li><button role="button" href="#" class="large">大</button></li>
+                </ul>
+              </div>
+              <!-- function功能區塊 -->
+              <div class="function">
+                <ul>
+                  <li class="back">
+                    <a href="javascript:history.back()">回上一頁</a>
+                  </li>
+                  <li class="print"><a href="#">友善列印</a></li>
+                  <li class="forward"><a href="#">轉寄友人</a></li>
+                </ul>
+              </div>
+              <!-- 社群分享 -->
+              <div class="share">
+                <ul>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- function功能區塊 -->
+            <div class="function">
+              <ul>
+                <li class="icon_back"><a href="#">回上一頁</a></li>
+                <li class="icon_print"><a href="#">友善列印</a></li>
+                <li class="icon_forward"><a href="#">轉寄友人</a></li>
+              </ul>
+            </div>
+            <section class="lp">
+              <!-- category -->
+              <div class="category">
+                <ul>
+                  <li><a href="#">標籤1</a></li>
+                  <li><a href="#">標籤2</a></li>
+                  <li><a href="#">標籤3</a></li>
+                  <li><a href="#">標籤4</a></li>
+                  <li><a href="#">標籤5</a></li>
+                  <li><a href="#">標籤6</a></li>
+                  <li><a href="#">標籤7</a></li>
+                  <li><a href="#">標籤8</a></li>
+                  <li><a href="#">標籤9</a></li>
+                  <li><a href="#">標籤10</a></li>
+                </ul>
+              </div>
+              <div class="albumList">
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="imgContainer">
+                      <img src="images/demo/12.jpg" alt="" />
+                    </div>
+                    <div class="caption">
+                      <ul class="pictureDetial">
+                        <li><i class="i_photo"></i>9,292張</li>
+                        <li><i class="i_view"></i>209,499次點閱</li>
+                      </ul>
+                      <time>2018-01-01</time>
+                      <h3>標題</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="imgContainer">
+                      <img src="images/demo/11.jpg" alt="" />
+                    </div>
+                    <div class="caption">
+                      <ul class="pictureDetial">
+                        <li><i class="i_photo"></i>9,292張</li>
+                        <li><i class="i_view"></i>209,499次點閱</li>
+                      </ul>
+                      <time>2018-01-01</time>
+                      <h3>標題</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="imgContainer">
+                      <img src="images/demo/10.jpg" alt="" />
+                    </div>
+                    <div class="caption">
+                      <ul class="pictureDetial">
+                        <li><i class="i_photo"></i>9,292張</li>
+                        <li><i class="i_view"></i>209,499次點閱</li>
+                      </ul>
+                      <time>2018-01-01</time>
+                      <h3>標題</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="imgContainer">
+                      <img src="images/demo/09.jpg" alt="" />
+                    </div>
+                    <div class="caption">
+                      <ul class="pictureDetial">
+                        <li><i class="i_photo"></i>9,292張</li>
+                        <li><i class="i_view"></i>209,499次點閱</li>
+                      </ul>
+                      <time>2018-01-01</time>
+                      <h3>標題</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="imgContainer">
+                      <img src="images/demo/08.jpg" alt="" />
+                    </div>
+                    <div class="caption">
+                      <ul class="pictureDetial">
+                        <li><i class="i_photo"></i>9,292張</li>
+                        <li><i class="i_view"></i>209,499次點閱</li>
+                      </ul>
+                      <time>2018-01-01</time>
+                      <h3>標題</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="imgContainer">
+                      <img src="images/demo/07.jpg" alt="" />
+                    </div>
+                    <div class="caption">
+                      <ul class="pictureDetial">
+                        <li><i class="i_photo"></i>9,292張</li>
+                        <li><i class="i_view"></i>209,499次點閱</li>
+                      </ul>
+                      <time>2018-01-01</time>
+                      <h3>標題</h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <!-- LP End -->
+            <!-- Pagination -->
+            <div class="pagination">
+              <form action="">
+                <div class="formInline">
+                  <div class="total">
+                    共<span>308</span>筆資料，第<span>1/18</span>頁，<label for="pet-select">每頁顯示</label>
+                    <select name="" id="pet-select" aria-label="每頁顯示">
+                      <option value="">10</option>
+                      <option value="">20</option>
+                      <option value="">30</option>
+                      <option value="">40</option>
+                    </select>
+                    筆 <input type="button" value="確定" class="btn btnSubmit" title="確定" />
+                  </div>
+                </div>
+              </form>
+              <ul class="page">
+                <li class="first">
+                  <a href="#" title="第一頁">第一頁 </a>
+                </li>
+                <li class="prev">
+                  <a href="#" title="回上一頁">回上一頁 </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li class="next">
+                  <a href="#" title="下一頁">下一頁 </a>
+                </li>
+                <li class="last">
+                  <a href="#" title="最後一頁">最後一頁 </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- fatFooter Start -->
+      <section class="fatFooter">
+        <div class="container">
+          <nav>
+            <ul>
+              <li>
+                <a href="#">關於本室</a>
+                <ul>
+                  <li><a href="#">開放時間</a></li>
+                  <li><a href="#">交通資訊</a></li>
+                  <li><a href="#">最新消息</a></li>
+                  <li><a href="#">空間介紹</a></li>
+                  <li><a href="#">統計資訊</a></li>
+                  <li><a href="#">捐贈服務</a></li>
+                  <li><a href="#">推薦書單</a></li>
+                  <li><a href="#">失物招領</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">館藏資源</a>
+                <ul>
+                  <li><a href="#">M7館藏查詢</a></li>
+                  <li><a href="#">電子資源查詢</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">借閱服務</a>
+                <ul>
+                  <li><a href="#">線上辦證</a></li>
+                  <li><a href="#">個人檔案</a></li>
+                  <li><a href="#">借閱辦法</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">設備服務</a>
+                <ul>
+                  <li><a href="#">線上預約座位</a></li>
+                  <li><a href="#">影印/列印說明</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">出版服務</a>
+                <ul>
+                  <li><a href="#">連結本館出版品資訊</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <!-- fatFooter End -->
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <a class="accessKey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+          <div class="footerLogo">
+            <img src="images/logo_.png" alt="" class="imgResponsive" />
+          </div>
+          <div class="footerInfo">
+            <p>
+              電話：02-22182438 <br />
+              傳真：02-22182436<br />
+              地址：23150 新北市新店區復興路131號
+            </p>
+            <p>
+              景美園區導覽預約 02-8219-2692<br />
+              綠島園區導覽預約089-671095#66
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
+
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- calendar -->
+    <script src="vendor/vanilla-calendar/vanilla-calendar.min.js"></script>
+    <!-- main js-->
+    <script src="js/main.js"></script>
+    <!-- js -->
+    <script src="js/customize.js"></script>
+  </body>
+</html>

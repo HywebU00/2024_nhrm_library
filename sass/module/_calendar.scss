@@ -1,0 +1,42 @@
+.calendarBlock {
+  .vanilla-calendar {
+    border-radius: 0;
+    .vanilla-calendar-header {
+      margin-bottom: 1rem;
+    }
+    .vanilla-calendar-week__day {
+      font-size: rem(14);
+    }
+    .vanilla-calendar-day {
+      width: 32px;
+      height: 32px;
+      margin: 3px 2px;
+    }
+    .vanilla-calendar-day__btn {
+      border-radius: 50%;
+      margin: 0;
+      color: #474747;
+      font-size: rem(14);
+    }
+    .vanilla-calendar-day__btn_today {
+      color: $colorPrimary;
+      font-weight: bold;
+      background-color: transparent;
+    }
+    .vanilla-calendar-day__btn_holiday {
+      color: #fff;
+      background-color: $colorSecondary;
+      &:hover {
+        color: #474747;
+      }
+    }
+    .vanilla-calendar-day__btn_selected {
+      color: #fff;
+      background-color: $colorPrimary !important;
+    }
+    .vanilla-calendar-day__btn_disabled {
+      color: #474747 !important;
+      background-color: $colorGray;
+    }
+  }
+}

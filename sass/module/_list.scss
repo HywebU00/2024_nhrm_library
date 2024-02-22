@@ -1,0 +1,248 @@
+.lp {
+  table {
+    td {
+      a {
+        @include aSetting($colorWord);
+      }
+      &.date {
+        text-align: center;
+        color: #666;
+        @include screen('mobile') {
+          text-align: left;
+        }
+      }
+      &.num {
+        text-align: center;
+        color: #666;
+        @include screen('mobile') {
+          text-align: left;
+        }
+      }
+    }
+  }
+  .list {
+    & > ul,
+    ol {
+      list-style-type: none;
+      padding: 0;
+      border-top: 2px solid $colorPrimary;
+      & > li {
+        padding: 0.75em 0 0.5em;
+        border-bottom: 1px solid #ddd;
+        position: relative; // outline: 1px solid blue;
+        .tag {
+          margin-left: 2em;
+        }
+        & > a {
+          display: block;
+          padding-left: 2em;
+          position: relative;
+          line-height: 1.45em;
+          font-weight: bold;
+          color: $colorWord;
+          &:hover {
+            color: $aHover;
+          }
+          .num {
+            width: 1.5em;
+            text-align: right;
+            position: absolute;
+            top: 0;
+            left: 0;
+            &:after {
+              content: '.';
+              display: inline-block;
+            }
+          }
+        }
+        span.dept {
+          display: inline-block;
+          font-size: 0.938em;
+          font-weight: normal;
+          @include screen('mobile') {
+            display: block;
+          }
+        }
+        time {
+          display: block;
+          color: #aaa;
+          font-size: 0.938em;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+//書籍列表
+.booksList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  .thumbnail {
+    flex-basis: calc(33.333333% - 20px);
+    max-width: calc(33.333333% - 20px);
+    margin: 0 10px 20px;
+    .imgContainer {
+      background-color: $colorDark;
+      img {
+        aspect-ratio: 1/1;
+        object-fit: contain;
+      }
+    }
+  }
+  .caption {
+    time {
+      color: #666;
+      font-size: rem(14);
+    }
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 76px;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+//活動列表
+.activitiesList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  .thumbnail {
+    flex-basis: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    margin: 10px;
+    .activityTag {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      padding: 0.5em 1em;
+      color: #fff;
+      background: $colorSecondary;
+    }
+    .imgContainer {
+      img {
+        aspect-ratio: 2/1;
+        object-fit: cover;
+      }
+    }
+    .caption {
+      width: 100%;
+      overflow: hidden;
+      padding: 0.5em 120px 1em 1em;
+      @include screen('mobile') {
+        padding: 0.5em 1em 1em;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        @include liReset;
+        li {
+          flex-basis: 50%;
+          max-width: 50%;
+          margin: 0 0 1em 0;
+          padding: o;
+          @include screen('mobile') {
+            flex-basis: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+      .time {
+        word-wrap: word-break;
+        font-size: 0.938em;
+        time {
+          font-size: 1em;
+          padding-right: 0.2em;
+          display: block;
+        }
+        span {
+          @include screen('xsMobile') {
+            display: block;
+          }
+        }
+      }
+      .status {
+        position: absolute;
+        width: 100px;
+        height: 80px;
+        right: 1em;
+        bottom: 1em;
+        background: #f1f1f1;
+        padding: 0.5em;
+        color: $colorWord;
+        text-align: center;
+        &.register {
+          color: $colorPrimary;
+        }
+        &.full {
+          color: lighten($colorWord, 10);
+        }
+        span {
+          display: block;
+          padding: 0.2em;
+          font-size: 0.938em;
+        }
+        .people {
+          font-size: 1.125em;
+          font-weight: bold;
+          font-family: Georgia;
+        }
+      }
+    }
+  }
+}
+
+.albumList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  .thumbnail {
+    flex-basis: calc(33.333333% - 20px);
+    max-width: calc(33.333333% - 20px);
+    margin: 0 10px 20px;
+    @include screen('tablet') {
+      flex-basis: calc(50% - 20px);
+      max-width: calc(50% - 20px);
+    }
+    @include screen('xsMobile') {
+      flex-basis: calc(100% - 20px);
+      max-width: calc(100% - 20px);
+    }
+    .imgContainer {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+      }
+    }
+    .caption {
+      position: relative;
+    }
+    .pictureDetial {
+      @include liReset;
+      color: #fff;
+      position: absolute;
+      top: -38px;
+      left: 0;
+      width: 100%;
+      font-size: 0.938em;
+      display: flex;
+      justify-content: space-between;
+      i {
+        margin-right: 3px;
+      }
+    }
+  }
+}
