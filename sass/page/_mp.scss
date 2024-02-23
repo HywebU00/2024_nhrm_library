@@ -78,8 +78,8 @@
       width: 300px;
     }
     @include screen('xsMobile') {
-      top: 50px;
-      left: -150px;
+      top: 90px;
+      left: -190px;
     }
   }
   .bookfly02 {
@@ -90,11 +90,10 @@
     @include screen('tablet') {
       z-index: 0;
       top: 230px;
-      width: 50px;
+      width: 80px;
     }
     @include screen('xsMobile') {
-      top: 270px;
-      right: -20px;
+      right: 0;
     }
   }
   .bookfly03 {
@@ -105,11 +104,11 @@
     @include screen('tablet') {
       z-index: 0;
       top: 230px;
-      width: 200px;
+      width: 110px;
     }
     @include screen('xsMobile') {
-      top: 270px;
-      right: -20px;
+      top: 300px;
+      right: -40px;
     }
   }
 }
@@ -703,12 +702,18 @@ section {
       opacity: 0;
       top: -100px;
       scale: 0.5;
+      @include screen('mobile') {
+        right: 0;
+        top: -50px;
+      }
     }
   }
   .leftBlock {
     flex-basis: calc(60% - 30px);
     max-width: 720px;
     margin-right: 30px;
+    position: relative;
+    z-index: 1;
     @include screen('tablet') {
       flex-basis: 100%;
       max-width: 100%;
