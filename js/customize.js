@@ -126,9 +126,9 @@ window.addEventListener('load', () => {
   const mpSlider = new Swiper('.mpSlider .swiper', {
     slidesPerView: 1,
     loop: true,
-    // autoplay: {
-    //   delay: 5000,
-    // },
+    autoplay: {
+      delay: 5000,
+    },
     // 切換點
     pagination: {
       el: '.mpSlider .swiperDots',
@@ -269,22 +269,6 @@ window.addEventListener('load', () => {
 
   readerArea();
 
-  let elementsArray = document.querySelectorAll('.tile');
-  console.log(elementsArray);
-  window.addEventListener('scroll', fadeIn);
-  function fadeIn() {
-    for (var i = 0; i < elementsArray.length; i++) {
-      var elem = elementsArray[i];
-      var distInView = elem.getBoundingClientRect().top - window.innerHeight + 20;
-      if (distInView < 0) {
-        elem.classList.add('inView');
-      } else {
-        elem.classList.remove('inView');
-      }
-    }
-  }
-  fadeIn();
-
   //GASP設定
   const tl_booksfly = gsap.timeline({
     scrollTrigger: {
@@ -294,6 +278,7 @@ window.addEventListener('load', () => {
       scrub: 0.5,
     },
   });
+
   tl_booksfly
     .to('.bookfly01', {
       scale: 1.1,
@@ -318,15 +303,6 @@ window.addEventListener('load', () => {
       },
       '<'
     );
-  // .to(
-  //   '.bookfly04',
-  //   {
-  //     scale: 0.6,
-  //     x: 100,
-  //     y: -200,
-  //   },
-  //   '<'
-  // );
 
   const tl_topBookFly = gsap.timeline({
     default: {},
@@ -337,7 +313,6 @@ window.addEventListener('load', () => {
     delay: 0.5,
     duration: 3,
     ease: Power1.easeInOut,
-    opacity: 0.5,
     scale: 0,
   });
   tl_topBookFly.from(
@@ -347,7 +322,6 @@ window.addEventListener('load', () => {
       y: -200,
       duration: 3,
       ease: Power1.easeInOut,
-      opacity: 0.5,
       scale: 0,
     },
     '<=0.5'
@@ -355,7 +329,7 @@ window.addEventListener('load', () => {
 
   const tl_topBookMove = gsap.timeline({
     scrollTrigger: {
-      trigger: '.topArea',
+      trigger: '.wrapper',
       start: 'top center',
       end: 'bottom center',
       scrub: true,
@@ -366,23 +340,50 @@ window.addEventListener('load', () => {
     .fromTo(
       '.bookfly04',
       {
-        xPercent: 25,
-        yPercent: -25,
+        xPercent: 10,
+        yPercent: -10,
       },
       {
-        xPercent: -25,
-        yPercent: 25,
+        xPercent: -40,
+        yPercent: 40,
       }
     )
     .fromTo(
       '.bookfly05',
       {
-        xPercent: 25,
-        yPercent: -25,
+        xPercent: 10,
+        yPercent: -10,
       },
       {
-        xPercent: -25,
-        yPercent: 25,
+        xPercent: -40,
+        yPercent: 40,
+      },
+      '<'
+    );
+  const tl_branchBookfly = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.branchInfo',
+      start: 'top top',
+      end: 'bottom centet',
+      scrub: 0.5,
+    },
+  });
+  tl_branchBookfly
+    .to('.bookfly06', {
+      duration: 1.5,
+      scale: 1,
+      opacity: 1,
+      xPercent: -120,
+      yPercent: 230,
+    })
+    .to(
+      '.bookfly07',
+      {
+        duration: 2,
+        scale: 1,
+        opacity: 1,
+        xPercent: 20,
+        yPercent: 260,
       },
       '<'
     );

@@ -3,6 +3,7 @@
 @import '../vendor/swiper/swiper-bundle.min.css';
 @import '../vendor/fancybox/fancybox.css';
 @import '../vendor/vanilla-calendar/vanilla-calendar.min.css';
+@import '../css/animate.css';
 .breadcrumb ul li + li:before {
   content: " / ";
   display: inline-block;
@@ -3095,35 +3096,6 @@ em[tooltip]:focus-visible {
   border-width: 0 0 2px 2px;
 }
 
-.megaMenu > ul {
-  position: relative;
-}
-.megaMenu > ul > li.active {
-  position: initial;
-}
-.megaMenu > ul > li.active > ul {
-  display: flex;
-  flex-wrap: wrap;
-  position: absolute;
-  width: 100%;
-  gap: 10px;
-}
-.megaMenu > ul > li.active > ul > li {
-  flex-basis: calc((100% - 30px) / 4);
-  flex-grow: 1;
-}
-.megaMenu > ul > li.active > ul ul {
-  display: block;
-  position: relative;
-  left: 0;
-  opacity: 1;
-  background: none;
-  padding-left: 20px;
-}
-.megaMenu > ul ul li.hasChild a::after {
-  display: none;
-}
-
 .demoFixedSidebar {
   min-height: 300px;
 }
@@ -5979,77 +5951,6 @@ div.function ul li.icon_forward a:before {
   filter: grayscale(1);
 }
 
-.marquee .swiperBox {
-  margin: 0;
-  list-style: none;
-  display: block;
-  overflow: hidden;
-  background: #fff;
-  text-align: left;
-  position: relative;
-  min-height: 1px;
-  padding-left: 30px;
-  box-sizing: border-box;
-  border-bottom: 1px solid #dadada;
-}
-@media (max-width: 991px) {
-  .marquee .swiperBox {
-    margin: 1.5em 0em;
-  }
-}
-.marquee .swiperBox .swiper {
-  height: 40px;
-}
-.marquee .swiperBox .marquee-arrow {
-  padding: 0;
-  position: absolute;
-  cursor: pointer;
-  left: 5px;
-  z-index: 9;
-  transform: rotate(90deg);
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-.marquee .swiperBox .marquee-arrow::before {
-  content: "";
-  width: 10px;
-  height: 20px;
-  display: block;
-  background: url("../vendor/swiper/ar.svg") center no-repeat;
-}
-.marquee .swiperBox .marquee-arrow.prevSlider {
-  top: 0;
-}
-.marquee .swiperBox .marquee-arrow.nextSlider {
-  bottom: 0;
-  left: 4px;
-}
-.marquee .swiperBox .marquee-arrow.nextSlider::before {
-  transform: rotate(180deg);
-}
-.marquee .swiperBox .marquee-arrow.marquee-arrow-disabled {
-  opacity: 0.3;
-}
-.marquee a {
-  display: block;
-  line-height: 40px;
-  margin-right: 3em;
-  font-weight: bold;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  color: #000;
-  text-decoration: none;
-}
-.marquee a span {
-  color: #7cb52f;
-  margin-right: 15px;
-}
-.marquee a:hover {
-  color: #7cb52f;
-}
-
 .pagination {
   margin: 0.5em auto;
   padding: 0;
@@ -6263,62 +6164,6 @@ div.function ul li.icon_forward a:before {
 *[class*=noticeError]:before {
   background: url(../images/basic/icon_error.svg) no-repeat center center;
   background-size: 15px;
-}
-
-.accordion ul {
-  list-style: none;
-  padding: 0;
-}
-.accordion ul li.accordionList {
-  margin-bottom: 0.5em;
-}
-.accordion ul li.accordionList .accordionBtn {
-  width: 100%;
-  border: none;
-  border-radius: 0;
-  display: block;
-  text-align: left;
-  background-color: #21baff;
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 50px 5px 20px;
-  position: relative;
-}
-.accordion ul li.accordionList.active .accordionArrow {
-  top: calc(50% - 2px);
-  transform: rotate(225deg);
-}
-.accordion .accordionContent {
-  line-height: 1.45em;
-  transition: height 0.3s linear;
-  overflow: hidden;
-  display: none;
-}
-.accordion .accordionContent .content {
-  padding: 10px;
-}
-.accordion .accordionState {
-  margin-left: 10px;
-}
-.accordion .accordionArrow {
-  position: absolute;
-  top: calc(50% - 7px);
-  right: 30px;
-  transform: rotate(45deg);
-  transform-origin: center center;
-}
-.accordion .accordionArrow:after {
-  content: "";
-  border: 2px solid #fff;
-  border-top: none;
-  border-left: none;
-  display: block;
-  width: 8px;
-  height: 8px;
-}
-.accordion .accordionArrow.open:after {
-  top: 8px;
-  transform: rotate(225deg);
 }
 
 /* sitemap */
@@ -6658,70 +6503,6 @@ body.noscroll {
 
 .hidden {
   display: none;
-}
-
-.imgArea {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 100%;
-  height: 100vh;
-}
-.imgArea .bookfly01 {
-  position: absolute;
-  left: -80px;
-  top: 200px;
-}
-@media screen and (max-width: 991px) {
-  .imgArea .bookfly01 {
-    width: 300px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .imgArea .bookfly01 {
-    top: 50px;
-    left: -150px;
-  }
-}
-.imgArea .bookfly02 {
-  position: absolute;
-  right: 35px;
-  top: 345px;
-  z-index: 10;
-}
-@media screen and (max-width: 991px) {
-  .imgArea .bookfly02 {
-    z-index: 0;
-    top: 230px;
-    width: 50px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .imgArea .bookfly02 {
-    top: 270px;
-    right: -20px;
-  }
-}
-.imgArea .bookfly03 {
-  position: absolute;
-  right: -80px;
-  top: 480px;
-  z-index: 10;
-}
-@media screen and (max-width: 991px) {
-  .imgArea .bookfly03 {
-    z-index: 0;
-    top: 230px;
-    width: 200px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .imgArea .bookfly03 {
-    top: 270px;
-    right: -20px;
-  }
 }
 
 .mobileSidebar {
@@ -7470,6 +7251,9 @@ br {
   width: 118px;
   height: auto;
   z-index: 1000;
+  opacity: 1;
+  animation-duration: 2s;
+  animation-name: disappear;
 }
 @media screen and (max-width: 991px) {
   .topArea .container .bookfly04 {
@@ -7497,6 +7281,8 @@ br {
   width: 160px;
   height: auto;
   z-index: 1000;
+  animation-duration: 2s;
+  animation-name: disappear;
 }
 @media screen and (max-width: 991px) {
   .topArea .container .bookfly05 {
@@ -7527,6 +7313,70 @@ br {
 }
 .topArea .rightBlock .fontSize {
   display: none;
+}
+
+.imgArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+}
+.imgArea .bookfly01 {
+  position: absolute;
+  left: -80px;
+  top: 200px;
+}
+@media screen and (max-width: 991px) {
+  .imgArea .bookfly01 {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .imgArea .bookfly01 {
+    top: 50px;
+    left: -150px;
+  }
+}
+.imgArea .bookfly02 {
+  position: absolute;
+  right: 15px;
+  top: 360px;
+  z-index: 10;
+}
+@media screen and (max-width: 991px) {
+  .imgArea .bookfly02 {
+    z-index: 0;
+    top: 230px;
+    width: 50px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .imgArea .bookfly02 {
+    top: 270px;
+    right: -20px;
+  }
+}
+.imgArea .bookfly03 {
+  position: absolute;
+  right: -80px;
+  top: 510px;
+  z-index: 10;
+}
+@media screen and (max-width: 991px) {
+  .imgArea .bookfly03 {
+    z-index: 0;
+    top: 230px;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .imgArea .bookfly03 {
+    top: 270px;
+    right: -20px;
+  }
 }
 
 .readerBlock {
@@ -8127,6 +7977,20 @@ section .more:hover::before {
     margin-left: 0;
   }
 }
+.branchInfo .container .bookfly06 {
+  position: absolute;
+  left: 60%;
+  top: -230px;
+  opacity: 0;
+  scale: 0.5;
+}
+.branchInfo .container .bookfly07 {
+  position: absolute;
+  right: 50%;
+  opacity: 0;
+  top: -100px;
+  scale: 0.5;
+}
 .branchInfo .leftBlock {
   flex-basis: calc(60% - 30px);
   max-width: 720px;
@@ -8269,6 +8133,17 @@ section .more:hover::before {
   flex: 1 1 40%;
 }
 
+@keyframes disappear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 h1.title,
 h2.title {
   font-size: 2em;

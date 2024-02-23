@@ -140,7 +140,7 @@
                   <li><button role="button" href="#" class="large">大</button></li>
                 </ul>
               </div>
-              <div class="mpSlider tile">
+              <div class="mpSlider wow fadeInDown" data-wow-duration="1s" data-wow-delay=".25s">
                 <div class="swiper">
                   <div class="swiper-wrapper">
                     <div class="item imgContainer swiper-slide" data-title="圖說1">
@@ -160,7 +160,7 @@
                 <!-- swiper 點切換-->
                 <div class="swiperDots"></div>
               </div>
-              <div class="webSearch">
+              <div class="webSearch wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
                 <div class="tabSet searchTab">
                   <!-- 頁籤的上一層父物件要加 role="tablist" -->
                   <div class="tabItems" role="tablist">
@@ -491,7 +491,7 @@
         </section>
         <section class="row newsArea">
           <div class="container">
-            <div class="news">
+            <div class="news wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".5s">
               <h2 class="sectionTitle">最新消息</h2>
               <div class="tabSet newsTab">
                 <div class="tabItems">
@@ -656,7 +656,7 @@
                 </div>
               </div>
             </div>
-            <div class="service">
+            <div class="service wow fadeInLeft" data-wow-duration=".5s" data-wow-delay="1s">
               <h2 class="sectionTitle">常用服務</h2>
               <ul>
                 <li>
@@ -675,6 +675,8 @@
         <section class="branchInfo">
           <h2 class="sectionTitle">各館資訊</h2>
           <div class="container">
+            <img src="images/bookfly06.png" alt="" class="bookfly06" />
+            <img src="images/bookfly07.png" alt="" class="bookfly07" />
             <div class="leftBlock">
               <div class="tabItems">
                 <button type="button" class="item active">國家人權博物館</button>
@@ -703,7 +705,7 @@
                 </div>
               </div>
             </div>
-            <div class="mapBlock">
+            <div class="mapBlock wow fadeIn" data-wow-duration=".5s" data-wow-delay="0s">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14465.453986631332!2d121.5333184!3d24.9877616!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468036027e44b4d%3A0x764d44bac6195af8!2z5ZyL5a625Lq65qyK5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1706241429539!5m2!1szh-TW!2stw"
                 width="100%"
@@ -853,6 +855,11 @@
     <!-- gsap -->
     <script src="vendor/gsap/gsap.min.js"></script>
     <script src="vendor/gsap/ScrollTrigger.min.js"></script>
+    <!-- wow -->
+    <script src="vendor/wow/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <!-- calendar -->
     <script src="vendor/vanilla-calendar/vanilla-calendar.min.js"></script>
     <!-- calendar 設定-->

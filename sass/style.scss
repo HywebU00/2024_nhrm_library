@@ -7,6 +7,7 @@
 @import '../vendor/swiper/swiper-bundle.min.css'; //swiper初始套件
 @import '../vendor/fancybox/fancybox.css'; //fancybox初始套件
 @import '../vendor/vanilla-calendar/vanilla-calendar.min.css';
+@import '../css/animate.css';
 //@import '../vendor/vanilla-calendar/themes/light.min.css';
 // 目前設定這layer中的權重最低
 
@@ -31,7 +32,7 @@
 // 模組 module
 @import 'module/_header'; //header
 @import 'module/_menu'; //menu
-@import 'module/_megamenu'; //megaMenu
+//@import 'module/_megamenu'; //megaMenu
 @import 'module/_fixedsidebar'; //固定側邊欄
 @import 'module/_footer'; //footer
 @import 'module/_fatfooter'; //fatFooter
@@ -42,10 +43,10 @@
 @import 'module/_tabs'; //頁籤
 @import 'module/_thumbnail'; //縮圖
 @import 'module/_functionpanel'; //內頁功能面板
-@import 'module/_marquee'; //跑馬燈
+//@import 'module/_marquee'; //跑馬燈
 @import 'module/_paginations'; //分頁
 @import 'module/_notice'; //提示
-@import 'module/_accordion.scss'; //收合式選單
+//@import 'module/_accordion.scss'; //收合式選單
 @import 'page/_sitemap'; //Sitemap
 @import 'page/_leftblock'; //左欄leftBlock
 @import 'page/_template'; //版型初始設定
