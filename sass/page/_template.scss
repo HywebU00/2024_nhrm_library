@@ -110,6 +110,26 @@ body {
     }
   }
 }
+
+.graphStatistics {
+  .flexForm {
+    margin-bottom: 2em;
+  }
+  .btnGrp.tabItems {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0.5em;
+    .btn {
+      flex: 0 1 auto;
+      &.active,
+      &:focus {
+        background-color: $aFocus;
+        color: #fff;
+        border-color: $aFocus;
+      }
+    }
+  }
+}
 .hidden {
   display: none;
 }

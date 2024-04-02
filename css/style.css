@@ -3562,7 +3562,7 @@ select::-ms-expand {
 }
 
 .flexForm {
-  font-size: 0.938rem;
+  font-size: 1rem;
   margin: 0.5em;
 }
 .flexForm .formGrp {
@@ -4906,19 +4906,20 @@ table caption .summary {
 table td {
   border: #ddd 1px solid;
   word-break: break-all;
+  background-color: #f5f5f5;
 }
 table td a {
   word-break: break-all;
 }
 table th {
-  background-color: #f3f3f3;
+  background-color: #f1f1f1;
   color: #333;
   border: #ddd 1px solid;
   text-align: center;
   white-space: nowrap;
 }
 table.tableHover tr:hover {
-  background: #f3f3f3;
+  background: #f1f1f1;
 }
 table.tableSprite tr:nth-child(even) {
   background: #f5f5f5;
@@ -5952,7 +5953,7 @@ div.function ul li.icon_forward a:before {
 }
 
 .pagination {
-  margin: 0.5em auto;
+  margin: 1em auto;
   padding: 0;
   display: block;
   text-align: center;
@@ -6499,6 +6500,23 @@ body.noscroll {
     flex-basis: 100%;
     max-width: 100%;
   }
+}
+
+.graphStatistics .flexForm {
+  margin-bottom: 2em;
+}
+.graphStatistics .btnGrp.tabItems {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.5em;
+}
+.graphStatistics .btnGrp.tabItems .btn {
+  flex: 0 1 auto;
+}
+.graphStatistics .btnGrp.tabItems .btn.active, .graphStatistics .btnGrp.tabItems .btn:focus {
+  background-color: #b94500;
+  color: #fff;
+  border-color: #b94500;
 }
 
 .hidden {

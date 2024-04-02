@@ -131,7 +131,7 @@
                 <li aria-current="page">節點</li>
               </ul>
             </nav>
-            <h2 class="title">問卷調查</h2>
+            <h2 class="title">統計資訊</h2>
             <!-- functionPanel -->
             <div class="functionPanel">
               <div class="publishTime"><span>發布日期：</span><time>2024-01-01</time></div>
@@ -152,15 +152,39 @@
                 </ul>
               </div>
             </div>
-            <div class="questionnaire">
-              <h3>基本資料</h3>
+            <div class="graphStatistics">
+              <div class="flexForm">
+                <div class="btnGrp tabItems">
+                  <!-- 選取狀態 class="active" -->
+                  <button type="button" class="btn active">館藏統計</button>
+                  <button type="button" class="btn">使用統計</button>
+                </div>
+                <div class="formGrp formInline">
+                  統計期間
+                  <div class="formContent formInline">
+                    <div class="datePick">
+                      <input name="" type="date" value="" class="calendar" placeholder="開始日期" title="開始日期" />
+                    </div>
+                    <div class="datePick">
+                      <input name="" type="date" value="" class="calendar" placeholder="結束日期" title="結束日期" />
+                    </div>
+                  </div>
+                </div>
+                <div class="checkGrp formInline">
+                  <label> <input type="checkbox" name="" value="" title="主題A" checked="" />主題A</label>
+                  <label> <input type="checkbox" name="" value="" title="主題B" />主題B</label>
+                  <label> <input type="checkbox" name="" value="" title="主題C" />主題C</label>
+                  <label> <input type="checkbox" name="" value="" title="主題D" />主題D</label>
+                </div>
+              </div>
               <div class="chartGrp">
+                <h3>XX統計A</h3>
                 <div class="fixThTable">
                   <table>
                     <tr>
-                      <th>性別</th>
-                      <th>男</th>
-                      <th>女</th>
+                      <th>主題</th>
+                      <th>主題A</th>
+                      <th>主題B</th>
                     </tr>
                     <tr>
                       <th>數量</th>
@@ -172,35 +196,11 @@
                 <div id="container0" class="chartContainer"></div>
               </div>
               <div class="chartGrp">
-                <div class="fixThTable">
-                  <table>
-                    <tr>
-                      <th>年齡</th>
-                      <th>12歲以下</th>
-                      <th>13-19歲</th>
-                      <th>20-29歲</th>
-                      <th>30-39歲</th>
-                      <th>40-49歲</th>
-                      <th>50-59歲</th>
-                      <th>60歲以上</th>
-                    </tr>
-                    <tr>
-                      <th>數量</th>
-                      <td>20</td>
-                      <td>30</td>
-                      <td>30</td>
-                      <td>40</td>
-                      <td>50</td>
-                      <td>30</td>
-                      <td>20</td>
-                    </tr>
-                  </table>
-                </div>
+                <h3>XX統計B</h3>
                 <div id="container1" class="chartContainer"></div>
               </div>
-              <h3>圖書館服務使用情形</h3>
               <div class="chartGrp">
-                <p>7.請問通常您到圖書館的目的是（可複選）：</p>
+                <h3>XX統計C</h3>
                 <div id="container2" class="chartContainer"></div>
               </div>
             </div>
@@ -309,7 +309,10 @@
           type: 'pie',
         },
         title: {
-          text: '',
+          text: 'XX統計A',
+        },
+        subtitle: {
+          text: '副標說明文字',
         },
         tooltip: {
           pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
@@ -326,95 +329,36 @@
         },
         series: [
           {
-            name: '性別',
+            name: '主題',
             colorByPoint: true,
             data: [
               {
-                name: '男',
+                name: 'A',
                 y: 100,
                 sliced: true,
                 selected: true,
               },
               {
-                name: '女',
+                name: 'B',
                 y: 200,
               },
             ],
           },
         ],
       });
-      // Build the chart
+
       Highcharts.chart('container1', {
-        chart: {
-          plotBackgroundColor: null,
-          plotBorderWidth: null,
-          plotShadow: false,
-          type: 'pie',
-        },
-        title: {
-          text: '',
-        },
-        tooltip: {
-          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
-        },
-        plotOptions: {
-          pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-              enabled: false,
-            },
-            showInLegend: true,
-          },
-        },
-        series: [
-          {
-            name: '年齡',
-            colorByPoint: true,
-            data: [
-              {
-                name: '12歲以下',
-                y: 20,
-                sliced: true,
-                selected: true,
-              },
-              {
-                name: '13-19歲',
-                y: 30,
-              },
-              {
-                name: '20-29歲',
-                y: 30,
-              },
-              {
-                name: '30-39歲',
-                y: 40,
-              },
-              {
-                name: '40-49歲',
-                y: 50,
-              },
-              {
-                name: '50-59歲',
-                y: 30,
-              },
-              {
-                name: '60歲以上',
-                y: 20,
-              },
-            ],
-          },
-        ],
-      });
-      Highcharts.chart('container2', {
         chart: {
           type: 'bar',
         },
         title: {
-          text: '',
+          text: 'XX統計B',
+        },
+        subtitle: {
+          text: '副標說明文字',
         },
         xAxis: {
-          categories: ['借/還圖書、期刊', '借/還視聽資料', '看書報、雜誌', '查找資料', '自修', '參加活動/展覽', '使用電腦上網', '其他'],
+          categories: ['主題A', '主題B'],
           title: {
             text: null,
           },
@@ -455,10 +399,75 @@
         },
         series: [
           {
-            name: '人數',
-            data: [80, 75, 94, 65, 34, 13, 27, 10],
+            name: '數列1',
+            data: [200, 100],
           },
         ],
+      });
+
+      Highcharts.chart('container2', {
+        title: {
+          text: 'XX統計C',
+          //align: 'left',
+        },
+
+        subtitle: {
+          text: '副標說明文字',
+          //align: 'left',
+        },
+
+        yAxis: {
+          title: {
+            text: 'Y軸標題',
+          },
+        },
+
+        xAxis: {
+          categories: ['2024/1', '2024/2', '2024/3', '2024/4'],
+        },
+
+        legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'middle',
+        },
+
+        plotOptions: {
+          line: {
+            dataLabels: {
+              enabled: true,
+            },
+            enableMouseTracking: false,
+          },
+        },
+
+        series: [
+          {
+            name: '主題A',
+            data: [100, 150, 200, 200],
+          },
+          {
+            name: '主題B',
+            data: [40, 120, 150, 250],
+          },
+        ],
+
+        responsive: {
+          rules: [
+            {
+              condition: {
+                maxWidth: 500,
+              },
+              chartOptions: {
+                legend: {
+                  layout: 'horizontal',
+                  align: 'center',
+                  verticalAlign: 'bottom',
+                },
+              },
+            },
+          ],
+        },
       });
     </script>
     <!-- main js-->

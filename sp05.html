@@ -86,6 +86,7 @@
       <!-- main Start -->
       <main id="center" class="main innerPage">
         <a class="accessKey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+
         <div class="container">
           <aside class="leftBlock stickySidebar">
             <nav class="menu mainMenu" role="navigation" aria-label="About page">
@@ -131,7 +132,7 @@
                 <li aria-current="page">節點</li>
               </ul>
             </nav>
-            <h2 class="title">問卷調查</h2>
+            <h2 class="title">線上辦證</h2>
             <!-- functionPanel -->
             <div class="functionPanel">
               <div class="publishTime"><span>發布日期：</span><time>2024-01-01</time></div>
@@ -152,56 +153,60 @@
                 </ul>
               </div>
             </div>
-            <div class="questionnaire">
-              <h3>基本資料</h3>
-              <div class="chartGrp">
-                <div class="fixThTable">
-                  <table>
-                    <tr>
-                      <th>性別</th>
-                      <th>男</th>
-                      <th>女</th>
-                    </tr>
-                    <tr>
-                      <th>數量</th>
-                      <td>100</td>
-                      <td>200</td>
-                    </tr>
-                  </table>
+            <section class="cp">
+              <h3>線上辦證個人資料保護法告知事項</h3>
+              <p>國家人權博物館(以下簡稱本館)謹遵個人資料保護法相關規定，對於讀者因辦理借閱證而由本館取得之個人資料或各項個人借閱流通使用記錄，必將依法遵循保密之責：</p>
+              <p>
+                一、蒐集目的：本館為執行圖書館利用與服務推廣的相關業務，而向讀者蒐集必要性資料。<br />
+                二、蒐集範圍：本館依據『個人資料保護法』第15、16條蒐集申請人的姓名、身份證字號、電話個人資料。且與存續期間或因執行業務所需保存期限內，不限地區，得合理處理及利用。<br />
+                三、讀者權益：申請人得依『個人資料保護法』第3條之規定，向本館提出申請補充、更正或請求刪除資料（請攜帶本人身份證正本向本館辦理）。
+              </p>
+            </section>
+            <div class="applyForm">
+              <h3>請填寫辦證資訊</h3>
+              <p>註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。</p>
+              <h4>讀者資料</h4>
+              <div class="flexForm formGrid">
+                <div class="formGrp">
+                  <label for="" class="formTitle"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>姓名</label>
+                  <div class="formContent">
+                    <input type="text" id="" value="" required="required" />
+                  </div>
                 </div>
-                <div id="container0" class="chartContainer"></div>
-              </div>
-              <div class="chartGrp">
-                <div class="fixThTable">
-                  <table>
-                    <tr>
-                      <th>年齡</th>
-                      <th>12歲以下</th>
-                      <th>13-19歲</th>
-                      <th>20-29歲</th>
-                      <th>30-39歲</th>
-                      <th>40-49歲</th>
-                      <th>50-59歲</th>
-                      <th>60歲以上</th>
-                    </tr>
-                    <tr>
-                      <th>數量</th>
-                      <td>20</td>
-                      <td>30</td>
-                      <td>30</td>
-                      <td>40</td>
-                      <td>50</td>
-                      <td>30</td>
-                      <td>20</td>
-                    </tr>
-                  </table>
+                <div class="formGrp">
+                  <label for="" class="formTitle">通訊地址</label>
+                  <div class="formContent">
+                    <input type="text" id="" value="" />
+                  </div>
                 </div>
-                <div id="container1" class="chartContainer"></div>
-              </div>
-              <h3>圖書館服務使用情形</h3>
-              <div class="chartGrp">
-                <p>7.請問通常您到圖書館的目的是（可複選）：</p>
-                <div id="container2" class="chartContainer"></div>
+                <div class="formGrp">
+                  <label for="" class="formTitle"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>行動電話</label>
+                  <div class="formContent">
+                    <input type="text" id="" value="" required="required" />
+                  </div>
+                </div>
+                <div class="formGrp">
+                  <label for="" class="formTitle"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>E-mail</label>
+                  <div class="formContent">
+                    <input type="email" id="" value="" required="required" class="error" />
+                    <div class="notice">這是一般提醒訊息區塊</div>
+                    <div class="noticeWarning">這似乎不是一個正常的Email格式</div>
+                  </div>
+                </div>
+
+                <div class="formGrp">
+                  <div class="formTitle">驗證碼</div>
+                  <div class="formContent formInline">
+                    <img src="images/basic/captcha.gif" alt="" class="captcha" />
+                    <input name="" type="text" value="" title="請輸入驗證碼" />
+                    <button type="button" class="btn"><i class="i_reflash_dark" aria-hidden="true" focusable="false"></i>重新整理</button>
+                    <button type="button" class="btn"><i class="i_play_dark" aria-hidden="true" focusable="false"></i>語音播放</button>
+                  </div>
+                </div>
+                <div class="btnGrp formInline">
+                  <button type="button" class="btn btnReset">取消</button>
+                  <button type="button" class="btn btnSubmit">確認報名</button>
+                </div>
               </div>
             </div>
           </div>
@@ -294,173 +299,6 @@
     <script src="vendor/gsap/ScrollTrigger.min.js"></script>
     <!-- calendar -->
     <script src="vendor/vanilla-calendar/vanilla-calendar.min.js"></script>
-    <!--highcharts-->
-    <script src="vendor/highcharts/code/highcharts.js"></script>
-    <script src="vendor/highcharts/code/modules/series-label.js"></script>
-    <script src="vendor/highcharts/code/modules/exporting.js"></script>
-    <script src="vendor/highcharts/code/modules/export-data.js"></script>
-    <script>
-      // Build the chart
-      Highcharts.chart('container0', {
-        chart: {
-          plotBackgroundColor: null,
-          plotBorderWidth: null,
-          plotShadow: false,
-          type: 'pie',
-        },
-        title: {
-          text: '',
-        },
-        tooltip: {
-          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
-        },
-        plotOptions: {
-          pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-              enabled: false,
-            },
-            showInLegend: true,
-          },
-        },
-        series: [
-          {
-            name: '性別',
-            colorByPoint: true,
-            data: [
-              {
-                name: '男',
-                y: 100,
-                sliced: true,
-                selected: true,
-              },
-              {
-                name: '女',
-                y: 200,
-              },
-            ],
-          },
-        ],
-      });
-      // Build the chart
-      Highcharts.chart('container1', {
-        chart: {
-          plotBackgroundColor: null,
-          plotBorderWidth: null,
-          plotShadow: false,
-          type: 'pie',
-        },
-        title: {
-          text: '',
-        },
-        tooltip: {
-          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
-        },
-        plotOptions: {
-          pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-              enabled: false,
-            },
-            showInLegend: true,
-          },
-        },
-        series: [
-          {
-            name: '年齡',
-            colorByPoint: true,
-            data: [
-              {
-                name: '12歲以下',
-                y: 20,
-                sliced: true,
-                selected: true,
-              },
-              {
-                name: '13-19歲',
-                y: 30,
-              },
-              {
-                name: '20-29歲',
-                y: 30,
-              },
-              {
-                name: '30-39歲',
-                y: 40,
-              },
-              {
-                name: '40-49歲',
-                y: 50,
-              },
-              {
-                name: '50-59歲',
-                y: 30,
-              },
-              {
-                name: '60歲以上',
-                y: 20,
-              },
-            ],
-          },
-        ],
-      });
-      Highcharts.chart('container2', {
-        chart: {
-          type: 'bar',
-        },
-        title: {
-          text: '',
-        },
-        xAxis: {
-          categories: ['借/還圖書、期刊', '借/還視聽資料', '看書報、雜誌', '查找資料', '自修', '參加活動/展覽', '使用電腦上網', '其他'],
-          title: {
-            text: null,
-          },
-        },
-        yAxis: {
-          min: 0,
-          title: {
-            text: '',
-            align: 'high',
-          },
-          labels: {
-            overflow: 'justify',
-          },
-        },
-        tooltip: {
-          valueSuffix: ' millions',
-        },
-        plotOptions: {
-          bar: {
-            dataLabels: {
-              enabled: true,
-            },
-          },
-        },
-        legend: {
-          layout: 'vertical',
-          align: 'right',
-          verticalAlign: 'top',
-          x: -40,
-          y: 80,
-          floating: true,
-          borderWidth: 1,
-          backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
-          shadow: true,
-        },
-        credits: {
-          enabled: false,
-        },
-        series: [
-          {
-            name: '人數',
-            data: [80, 75, 94, 65, 34, 13, 27, 10],
-          },
-        ],
-      });
-    </script>
     <!-- main js-->
     <script src="js/main.js"></script>
     <!-- js -->

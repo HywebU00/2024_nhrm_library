@@ -86,6 +86,7 @@
       <!-- main Start -->
       <main id="center" class="main innerPage">
         <a class="accessKey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+
         <div class="container">
           <aside class="leftBlock stickySidebar">
             <nav class="menu mainMenu" role="navigation" aria-label="About page">
@@ -131,7 +132,7 @@
                 <li aria-current="page">節點</li>
               </ul>
             </nav>
-            <h2 class="title">問卷調查</h2>
+            <h2 class="title">電子資源查詢</h2>
             <!-- functionPanel -->
             <div class="functionPanel">
               <div class="publishTime"><span>發布日期：</span><time>2024-01-01</time></div>
@@ -152,57 +153,81 @@
                 </ul>
               </div>
             </div>
-            <div class="questionnaire">
-              <h3>基本資料</h3>
-              <div class="chartGrp">
-                <div class="fixThTable">
-                  <table>
-                    <tr>
-                      <th>性別</th>
-                      <th>男</th>
-                      <th>女</th>
-                    </tr>
-                    <tr>
-                      <th>數量</th>
-                      <td>100</td>
-                      <td>200</td>
-                    </tr>
-                  </table>
+            <div class="flexForm formGrid">
+              <div class="formGrp">
+                <label for="" class="formTitle">類型</label>
+                <div class="formContent formInline">
+                  <select id="selectSample" name="">
+                    <option value="">圖書</option>
+                    <option value="">期刊</option>
+                  </select>
                 </div>
-                <div id="container0" class="chartContainer"></div>
               </div>
-              <div class="chartGrp">
-                <div class="fixThTable">
-                  <table>
-                    <tr>
-                      <th>年齡</th>
-                      <th>12歲以下</th>
-                      <th>13-19歲</th>
-                      <th>20-29歲</th>
-                      <th>30-39歲</th>
-                      <th>40-49歲</th>
-                      <th>50-59歲</th>
-                      <th>60歲以上</th>
-                    </tr>
-                    <tr>
-                      <th>數量</th>
-                      <td>20</td>
-                      <td>30</td>
-                      <td>30</td>
-                      <td>40</td>
-                      <td>50</td>
-                      <td>30</td>
-                      <td>20</td>
-                    </tr>
-                  </table>
+              <div class="formGrp">
+                <label for="" class="formTitle">關鍵字</label>
+                <div class="formContent">
+                  <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
-                <div id="container1" class="chartContainer"></div>
               </div>
-              <h3>圖書館服務使用情形</h3>
-              <div class="chartGrp">
-                <p>7.請問通常您到圖書館的目的是（可複選）：</p>
-                <div id="container2" class="chartContainer"></div>
+              <div class="formGrp">
+                <label for="" class="formTitle">主題</label>
+                <div class="formContent formInline">
+                  <select id="selectSample" name="">
+                    <option value="">人權</option>
+                    <option value="">主題A</option>
+                    <option value="">主題B</option>
+                  </select>
+                </div>
               </div>
+              <div class="formGrp">
+                <label for="" class="formTitle">類型</label>
+                <div class="formContent formInline">
+                  <select id="selectSample" name="">
+                    <option value="">資料庫</option>
+                    <option value="">AAA</option>
+                    <option value="">BBB</option>
+                  </select>
+                </div>
+              </div>
+              <div class="formGrp">
+                <label for="" class="formTitle">語言</label>
+                <div class="formContent formInline">
+                  <select id="selectSample" name="">
+                    <option value="">全部</option>
+                    <option value="">中文</option>
+                    <option value="">英文</option>
+                  </select>
+                </div>
+              </div>
+              <div class="btnGrp formInline">
+                <button type="button" class="btn btnSubmit">查詢</button>
+              </div>
+            </div>
+            <div class="tableList">
+              <table>
+                <thead>
+                  <tr>
+                    <th>編號</th>
+                    <th>名稱</th>
+                    <th>外觀描述</th>
+                    <th>更多</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01</td>
+                    <td><a href="#">HyRead台灣全文資料庫</a></td>
+                    <td>收錄台灣學術電子期刊為主，約1200+種電子期刊全文……</td>
+                    <td><a href="#" class="btn">詳細內容</a></td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td><a href="#">Walking Library電子雜誌</a></td>
+                    <td>AEB Walking Library電子雜誌以數位化形式呈現雜誌……</td>
+                    <td><a href="#" class="btn">詳細內容</a></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -294,173 +319,6 @@
     <script src="vendor/gsap/ScrollTrigger.min.js"></script>
     <!-- calendar -->
     <script src="vendor/vanilla-calendar/vanilla-calendar.min.js"></script>
-    <!--highcharts-->
-    <script src="vendor/highcharts/code/highcharts.js"></script>
-    <script src="vendor/highcharts/code/modules/series-label.js"></script>
-    <script src="vendor/highcharts/code/modules/exporting.js"></script>
-    <script src="vendor/highcharts/code/modules/export-data.js"></script>
-    <script>
-      // Build the chart
-      Highcharts.chart('container0', {
-        chart: {
-          plotBackgroundColor: null,
-          plotBorderWidth: null,
-          plotShadow: false,
-          type: 'pie',
-        },
-        title: {
-          text: '',
-        },
-        tooltip: {
-          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
-        },
-        plotOptions: {
-          pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-              enabled: false,
-            },
-            showInLegend: true,
-          },
-        },
-        series: [
-          {
-            name: '性別',
-            colorByPoint: true,
-            data: [
-              {
-                name: '男',
-                y: 100,
-                sliced: true,
-                selected: true,
-              },
-              {
-                name: '女',
-                y: 200,
-              },
-            ],
-          },
-        ],
-      });
-      // Build the chart
-      Highcharts.chart('container1', {
-        chart: {
-          plotBackgroundColor: null,
-          plotBorderWidth: null,
-          plotShadow: false,
-          type: 'pie',
-        },
-        title: {
-          text: '',
-        },
-        tooltip: {
-          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
-        },
-        plotOptions: {
-          pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-              enabled: false,
-            },
-            showInLegend: true,
-          },
-        },
-        series: [
-          {
-            name: '年齡',
-            colorByPoint: true,
-            data: [
-              {
-                name: '12歲以下',
-                y: 20,
-                sliced: true,
-                selected: true,
-              },
-              {
-                name: '13-19歲',
-                y: 30,
-              },
-              {
-                name: '20-29歲',
-                y: 30,
-              },
-              {
-                name: '30-39歲',
-                y: 40,
-              },
-              {
-                name: '40-49歲',
-                y: 50,
-              },
-              {
-                name: '50-59歲',
-                y: 30,
-              },
-              {
-                name: '60歲以上',
-                y: 20,
-              },
-            ],
-          },
-        ],
-      });
-      Highcharts.chart('container2', {
-        chart: {
-          type: 'bar',
-        },
-        title: {
-          text: '',
-        },
-        xAxis: {
-          categories: ['借/還圖書、期刊', '借/還視聽資料', '看書報、雜誌', '查找資料', '自修', '參加活動/展覽', '使用電腦上網', '其他'],
-          title: {
-            text: null,
-          },
-        },
-        yAxis: {
-          min: 0,
-          title: {
-            text: '',
-            align: 'high',
-          },
-          labels: {
-            overflow: 'justify',
-          },
-        },
-        tooltip: {
-          valueSuffix: ' millions',
-        },
-        plotOptions: {
-          bar: {
-            dataLabels: {
-              enabled: true,
-            },
-          },
-        },
-        legend: {
-          layout: 'vertical',
-          align: 'right',
-          verticalAlign: 'top',
-          x: -40,
-          y: 80,
-          floating: true,
-          borderWidth: 1,
-          backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
-          shadow: true,
-        },
-        credits: {
-          enabled: false,
-        },
-        series: [
-          {
-            name: '人數',
-            data: [80, 75, 94, 65, 34, 13, 27, 10],
-          },
-        ],
-      });
-    </script>
     <!-- main js-->
     <script src="js/main.js"></script>
     <!-- js -->
