@@ -1,25 +1,23 @@
 @charset "UTF-8";
+/* noto-sans-tc-regular - chinese-traditional */
 @import '../vendor/swiper/swiper-bundle.min.css';
 @import '../vendor/fancybox/fancybox.css';
 @import '../vendor/vanilla-calendar/vanilla-calendar.min.css';
 @import '../css/animate.css';
 @font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Noto Sans TC";
-  src: url("../fonts/NotoSansTC-Regular.ttf") format("truetype");
-  font-weight: normal;
   font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/noto-sans-tc-v35-chinese-traditional-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+/* noto-sans-tc-600 - chinese-traditional */
 @font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Noto Sans TC";
-  src: url("../fonts/NotoSansTC-Medium.ttf") format("truetype");
-  font-weight: 500;
   font-style: normal;
-}
-@font-face {
-  font-family: "Noto Sans TC";
-  src: url("../fonts/NotoSansTC-SemiBold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/noto-sans-tc-v35-chinese-traditional-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 .breadcrumb ul li + li:before {
   content: " / ";

@@ -1,29 +1,40 @@
 @charset "utf-8";
 // @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600&display=swap');
+
 // @font-face {
 //   font-family: 'Noto Sans TC';
-//   src: url('../fonts/NotoSansTC-Light.ttf') format('truetype');
-//   font-weight: 300;
+//   src: url('../fonts/NotoSansTC-Regular.ttf') format('truetype');
+//   font-weight: normal;
 //   font-style: normal;
 // }
-@font-face {
-  font-family: 'Noto Sans TC';
-  src: url('../fonts/NotoSansTC-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Sans TC';
-  src: url('../fonts/NotoSansTC-SemiBold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'Noto Sans TC';
+//   src: url('../fonts/NotoSansTC-SemiBold.ttf') format('truetype');
+//   font-weight: bold;
+//   font-style: normal;
+// }
 // @font-face {
 //   font-family: 'Noto Sans TC';
 //   src: url('../fonts/NotoSansTC-Bold.ttf') format('truetype');
 //   font-weight: 700;
 //   font-style: normal;
 // }
+/* noto-sans-tc-regular - chinese-traditional */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/noto-sans-tc-v35-chinese-traditional-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-tc-600 - chinese-traditional */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/noto-sans-tc-v35-chinese-traditional-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 @import '_variable'; //變數
 @import 'common/_mixin'; //客製MIXIN
 
