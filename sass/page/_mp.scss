@@ -740,6 +740,8 @@ section {
   }
   .calendarBlock {
     margin-right: 10px;
+    flex: 0 1 284px;
+    max-width: 284px;
     @include screen('mobile') {
       margin: 0 auto;
     }

@@ -1,5 +1,35 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600&display=swap');
+// @font-face {
+//   font-family: 'Noto Sans TC';
+//   src: url('../fonts/NotoSansTC-Light.ttf') format('truetype');
+//   font-weight: 300;
+//   font-style: normal;
+// }
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url('../fonts/NotoSansTC-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url('../fonts/NotoSansTC-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url('../fonts/NotoSansTC-SemiBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+// @font-face {
+//   font-family: 'Noto Sans TC';
+//   src: url('../fonts/NotoSansTC-Bold.ttf') format('truetype');
+//   font-weight: 700;
+//   font-style: normal;
+// }
 @import '_variable'; //變數
 @import 'common/_mixin'; //客製MIXIN
 
@@ -43,7 +73,7 @@
 @import 'module/_tabs'; //頁籤
 @import 'module/_thumbnail'; //縮圖
 @import 'module/_functionpanel'; //內頁功能面板
-//@import 'module/_marquee'; //跑馬燈
+@import 'module/_marquee'; //跑馬燈
 @import 'module/_paginations'; //分頁
 @import 'module/_notice'; //提示
 //@import 'module/_accordion.scss'; //收合式選單

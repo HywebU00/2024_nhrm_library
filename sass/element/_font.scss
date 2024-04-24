@@ -15,6 +15,7 @@ body {
   line-height: 1.6em;
   letter-spacing: 0.05em;
   font-family: $fontFamily;
+  font-weight: 400;
   -webkit-text-size-adjust: none;
   // --變更為全站
   &.smallSize {
