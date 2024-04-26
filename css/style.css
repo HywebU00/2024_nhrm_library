@@ -2944,7 +2944,7 @@ em[tooltip]:focus-visible {
 }
 .mainMenu > ul > li > a {
   display: block;
-  padding: 0 1em;
+  padding: 0 1.5em;
   min-height: 2.5em;
   font-weight: 500;
   line-height: 2.5em;
@@ -2966,7 +2966,7 @@ em[tooltip]:focus-visible {
   content: "";
   position: absolute;
   top: calc(50% - 1px);
-  right: 0;
+  right: 0.5em;
   width: 4px;
   height: 4px;
   display: block;
@@ -2998,7 +2998,7 @@ em[tooltip]:focus-visible {
   z-index: 90;
   position: absolute;
   top: 0.5em;
-  left: calc(100% + 10px);
+  left: 100%;
   opacity: 0;
   list-style: none;
   text-align: left;
