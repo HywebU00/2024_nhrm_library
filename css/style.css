@@ -7855,7 +7855,9 @@ br {
   aspect-ratio: 2/3;
   -o-object-fit: contain;
      object-fit: contain;
-  background-color: #eee;
+  background-color: #fff;
+  width: 100%;
+  max-width: 100%;
 }
 .bookSlider .swiper-slide .bookName {
   margin-top: 1em;
