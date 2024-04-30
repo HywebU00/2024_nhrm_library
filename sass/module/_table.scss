@@ -167,9 +167,9 @@ table {
   }
 }
 .tableWrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
+  // overflow-x: scroll;
+  // overflow-y: hidden;
+  // scroll-behavior: smooth;
   clear: both;
   @include screen('mobile') {
     width: 100%;
@@ -277,13 +277,13 @@ table {
 // }
 
 // scrollTable style
-.tableWrapper {
-  & > div {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-  }
+
+.tableScroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
 }
+
 .scrollTableNav {
   width: 60px;
   position: absolute;

@@ -5056,9 +5056,6 @@ table .businessList {
 }
 
 .tableWrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
   clear: both;
 }
 @media screen and (max-width: 767px) {
@@ -5097,7 +5094,7 @@ table .businessList {
   overflow: hidden;
 }
 
-.tableWrapper > div {
+.tableScroll {
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
