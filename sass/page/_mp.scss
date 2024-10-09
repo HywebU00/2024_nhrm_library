@@ -660,7 +660,7 @@ section {
 }
 
 .branchInfo {
-  background-color: $colorPrimary;
+  background-color: mix($colorPrimary, #fff, 85%);
   padding: 3em 0;
 
   @include screen('mobile') {
@@ -784,7 +784,7 @@ section {
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    color: #fff;
+    color: $colorWord;
     @include screen('tablet') {
       padding: 0 0 0 30px;
     }
@@ -794,7 +794,8 @@ section {
     .subTitle {
       width: 100%;
       text-align: center;
-      font-size: rem(20);
+      font-size: rem(24);
+      font-weight: normal;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -805,7 +806,7 @@ section {
         display: block;
         flex: 1 1 auto;
         height: 1px;
-        background-color: #fff;
+        background-color: rgba(0, 0, 0, 0.25);
       }
       &::before {
         margin-right: 10px;

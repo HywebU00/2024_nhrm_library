@@ -8044,7 +8044,7 @@ section .more:hover::before {
 }
 
 .branchInfo {
-  background-color: #14a0be;
+  background-color: #37aec8;
   padding: 3em 0;
 }
 @media screen and (max-width: 767px) {
@@ -8181,7 +8181,7 @@ section .more:hover::before {
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
-  color: #fff;
+  color: #333;
 }
 @media screen and (max-width: 991px) {
   .branchInfo .infoBlock {
@@ -8196,7 +8196,8 @@ section .more:hover::before {
 .branchInfo .infoBlock .subTitle {
   width: 100%;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: normal;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8207,7 +8208,7 @@ section .more:hover::before {
   display: block;
   flex: 1 1 auto;
   height: 1px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 .branchInfo .infoBlock .subTitle::before {
   margin-right: 10px;
